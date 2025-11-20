@@ -4,7 +4,7 @@ import { Subscription, take } from 'rxjs';
 import { PokemonModel } from './models/pokemon.model';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ButtonComponent } from './components/button/button.component';
@@ -12,7 +12,11 @@ import { ButtonComponent } from './components/button/button.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HttpClientModule, CardPokemonComponent, LoadingComponent, ButtonComponent],
+  imports: [RouterOutlet, CommonModule, 
+// TODO: `HttpClientModule` should not be imported into a component directly.
+// Please refactor the code to add `provideHttpClient()` call to the provider list in the
+// application bootstrap logic and remove the `HttpClientModule` import from this component.
+HttpClientModule, CardPokemonComponent, LoadingComponent, ButtonComponent],
   providers: [PokemonService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
