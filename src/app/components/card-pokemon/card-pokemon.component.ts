@@ -7,11 +7,10 @@ import { Subscription, take } from 'rxjs';
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
-  selector: 'card-pokemon-component',
-  standalone: true,
-  imports: [CommonModule, StatsBarComponent, ButtonComponent],
-  templateUrl: './card-pokemon.component.html',
-  styleUrl: './card-pokemon.component.scss'
+    selector: 'card-pokemon-component',
+    imports: [CommonModule, StatsBarComponent, ButtonComponent],
+    templateUrl: './card-pokemon.component.html',
+    styleUrl: './card-pokemon.component.scss'
 })
 export class CardPokemonComponent implements OnInit, OnDestroy {
 

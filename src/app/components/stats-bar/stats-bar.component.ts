@@ -5,11 +5,10 @@ import { Subscription } from 'rxjs';
 import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
-  selector: 'stats-bar-component',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './stats-bar.component.html',
-  styleUrl: './stats-bar.component.scss'
+    selector: 'stats-bar-component',
+    imports: [CommonModule],
+    templateUrl: './stats-bar.component.html',
+    styleUrl: './stats-bar.component.scss'
 })
 export class StatsBarComponent implements OnInit, OnDestroy {
 
