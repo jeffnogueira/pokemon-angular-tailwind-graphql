@@ -1,10 +1,9 @@
-<div *ngIf="pokemon" class="app-component">
-  <img class="title"
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" >
-
-  <card-pokemon-component [pokemon]="pokemon"></card-pokemon-component>
-
-  <button-component class="buttonGeneratePokemon" (onclick)="getPokemon()">Another One</button-component>
-
-  <loading-component></loading-component>
-</div>
+@if (pokemon) {
+  <div class="app-component">
+    <img class="title"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" >
+      <card-pokemon-component [pokemon]="pokemon"></card-pokemon-component>
+      <button-component class="buttonGeneratePokemon" (onclick)="getPokemon()">Another One</button-component>
+      <loading-component></loading-component>
+    </div>
+  }

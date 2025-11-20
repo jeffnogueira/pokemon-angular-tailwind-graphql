@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { Subscription, take } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'loading-component',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './loading.component.html',
     styleUrl: './loading.component.scss'
 })
